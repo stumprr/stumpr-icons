@@ -1,0 +1,31 @@
+{
+	"name": "stumpr",
+	"private": true,
+	"type": "module",
+	"packageManager": "bun@1.3.14",
+	"workspaces": {
+		"packages": [
+			"apps/*",
+			"packages/*"
+		],
+		"catalog": {
+			"react": "^19.3.0",
+			"@types/node": "^26.6.2",
+			"tailwindcss": "^4.3.3",
+			"@types/react": "^19.3.0"
+		}
+	},
+	"scripts": {
+		"dev": "turbo run dev",
+		"build": "turbo run build",
+		"check-types": "turbo run check-types",
+		"dev:native": "turbo run dev -F native --",
+		"dev:web": "turbo run dev -F web --"
+	},
+	"devDependencies": {
+		"@stumpr/config": "workspace:*",
+		"@types/node": "catalog:",
+		"turbo": "^2.10.12",
+		"typescript": "^6.0.3"
+	}
+}

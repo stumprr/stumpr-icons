@@ -1,0 +1,29 @@
+{
+	"expo": {
+		"name": "stumpr",
+		"slug": "stumpr",
+		"scheme": "stumpr",
+		"version": "1.0.0",
+		"orientation": "portrait",
+		"icon": "./assets/images/icon.png",
+		"userInterfaceStyle": "automatic",
+		"platforms": ["ios", "android"],
+		"ios": {
+			"supportsTablet": true,
+			"bundleIdentifier": "com.anonymous.stumpr"
+		},
+		"android": {
+			"adaptiveIcon": {
+				"backgroundColor": "#E6F4FE",
+				"foregroundImage": "./assets/images/android-icon-foreground.png",
+				"backgroundImage": "./assets/images/android-icon-background.png",
+				"monochromeImage": "./assets/images/android-icon-monochrome.png"
+			},
+			"predictiveBackGestureEnabled": false,
+			"package": "com.anonymous.stumpr"
+		},
+		"experiments": {
+			"reactCompiler": true
+		}
+	}
+}

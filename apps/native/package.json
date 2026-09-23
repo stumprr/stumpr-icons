@@ -12,6 +12,7 @@
 		"check-types": "tsc --noEmit"
 	},
 	"dependencies": {
+		"@stumpr/icons-react-native": "workspace:*",
 		"expo": "~57.0.20",
 		"react": "catalog:",
 		"react-native": "0.86.3",

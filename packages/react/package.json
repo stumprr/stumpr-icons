@@ -1,0 +1,23 @@
+{
+	"name": "@stumpr/icons-react",
+	"version": "0.0.0",
+	"private": true,
+	"type": "module",
+	"main": "./src/index.ts",
+	"types": "./src/index.ts",
+	"scripts": {
+		"check-types": "tsc --noEmit"
+	},
+	"peerDependencies": {
+		"react": "catalog:"
+	},
+	"dependencies": {
+		"@stumpr/icons": "workspace:*"
+	},
+	"devDependencies": {
+		"@stumpr/config": "workspace:*",
+		"@types/react": "catalog:",
+		"react": "catalog:",
+		"typescript": "^6.0.3"
+	}
+}

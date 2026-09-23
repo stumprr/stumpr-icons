@@ -1,0 +1,25 @@
+{
+	"name": "@stumpr/icons-react-native",
+	"version": "0.0.0",
+	"private": true,
+	"type": "module",
+	"main": "./src/index.ts",
+	"types": "./src/index.ts",
+	"scripts": {
+		"check-types": "tsc --noEmit"
+	},
+	"peerDependencies": {
+		"react": "catalog:",
+		"react-native-svg": "15.15.4"
+	},
+	"dependencies": {
+		"@stumpr/icons": "workspace:*"
+	},
+	"devDependencies": {
+		"@stumpr/config": "workspace:*",
+		"@types/react": "catalog:",
+		"react": "catalog:",
+		"react-native-svg": "15.15.4",
+		"typescript": "^6.0.3"
+	}
+}

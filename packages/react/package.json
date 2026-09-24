@@ -8,9 +8,6 @@
 	"scripts": {
 		"check-types": "tsc --noEmit"
 	},
-	"peerDependencies": {
-		"react": "catalog:"
-	},
 	"dependencies": {
 		"@stumpr/icons": "workspace:*"
 	},
@@ -19,5 +16,8 @@
 		"@types/react": "catalog:",
 		"react": "catalog:",
 		"typescript": "^6.0.3"
+	},
+	"peerDependencies": {
+		"react": "catalog:"
 	}
 }

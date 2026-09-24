@@ -1,0 +1,22 @@
+import type { IconNode } from "../types";
+
+export const menuIconNode: IconNode = [
+	[
+		"path",
+		{
+			d: "M4 5h16",
+		},
+	],
+	[
+		"path",
+		{
+			d: "M4 12h16",
+		},
+	],
+	[
+		"path",
+		{
+			d: "M4 19h16",
+		},
+	],
+];

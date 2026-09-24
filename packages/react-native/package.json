@@ -8,10 +8,6 @@
 	"scripts": {
 		"check-types": "tsc --noEmit"
 	},
-	"peerDependencies": {
-		"react": "catalog:",
-		"react-native-svg": "15.15.4"
-	},
 	"dependencies": {
 		"@stumpr/icons": "workspace:*"
 	},
@@ -21,5 +17,9 @@
 		"react": "catalog:",
 		"react-native-svg": "15.15.4",
 		"typescript": "^6.0.3"
+	},
+	"peerDependencies": {
+		"react": "catalog:",
+		"react-native-svg": "15.15.4"
 	}
 }

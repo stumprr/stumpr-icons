@@ -1,0 +1,18 @@
+import type { IconNode } from "../types";
+
+export const circleCheckIconNode: IconNode = [
+	[
+		"circle",
+		{
+			cx: "12",
+			cy: "12",
+			r: "10",
+		},
+	],
+	[
+		"path",
+		{
+			d: "m16 9-5.5 5.5L8 12",
+		},
+	],
+];

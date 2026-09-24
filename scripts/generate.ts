@@ -160,7 +160,16 @@ async function main() {
 	const reactIconsIndexContent = `${icons.map((i) => `export { ${i.componentName} } from "./${i.componentName}";`).join("\n")}\n`;
 	await fs.writeFile(path.join(reactIconsDir, "index.ts"), reactIconsIndexContent);
 
-	const reactMainIndex = `export type { StumprIcon } from "./createStumprIcon";\nexport * from "./icons/index";\n`;
+	const reactMainIndex = `export type { StumprIcon, StumprIconProps } from "./createStumprIcon";
+export {
+	StumprIconContext,
+	StumprIconProvider,
+	useStumprIconContext,
+	type StumprIconConfig,
+	type StumprIconProviderProps,
+} from "./context";
+export * from "./icons/index";
+`;
 	await fs.writeFile(path.join(REACT_DIR, "src", "index.ts"), reactMainIndex);
 
 	// 3. Generate @stumpr/icons-react-native
@@ -172,7 +181,16 @@ async function main() {
 	const rnIconsIndexContent = `${icons.map((i) => `export { ${i.componentName} } from "./${i.componentName}";`).join("\n")}\n`;
 	await fs.writeFile(path.join(rnIconsDir, "index.ts"), rnIconsIndexContent);
 
-	const rnMainIndex = `export type { StumprIcon } from "./createStumprIcon";\nexport * from "./icons/index";\n`;
+	const rnMainIndex = `export type { StumprIcon, StumprIconProps } from "./createStumprIcon";
+export {
+	StumprIconContext,
+	StumprIconProvider,
+	useStumprIconContext,
+	type StumprIconConfig,
+	type StumprIconProviderProps,
+} from "./context";
+export * from "./icons/index";
+`;
 	await fs.writeFile(path.join(RN_DIR, "src", "index.ts"), rnMainIndex);
 
 	console.log(

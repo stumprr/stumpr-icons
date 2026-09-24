@@ -1,4 +1,4 @@
-import type { ComponentType, ReactElement } from "react";
+import { useContext, type ComponentType, type ReactElement } from "react";
 import Svg, {
 	Circle,
 	G,
@@ -10,8 +10,9 @@ import Svg, {
 	type SvgProps,
 } from "react-native-svg";
 import type { IconNode } from "@stumpr/icons";
+import { StumprIconContext } from "./context";
 
-type StumprIconProps = SvgProps & {
+export type StumprIconProps = SvgProps & {
 	color?: string;
 	size?: number | string;
 	strokeWidth?: number | string;
@@ -34,20 +35,26 @@ const elementMap: Record<string, ComponentType<any>> = {
 
 export function createStumprIcon(iconName: string, iconNode: IconNode): StumprIcon {
 	const Component: StumprIcon = ({
-		color = "currentColor",
-		size = 24,
-		strokeWidth = 2,
+		color,
+		size,
+		strokeWidth,
 		children,
 		...rest
 	}: StumprIconProps) => {
+		const context = useContext(StumprIconContext);
+
+		const finalColor = color ?? context.color ?? "currentColor";
+		const finalSize = size ?? context.size ?? 24;
+		const finalStrokeWidth = strokeWidth ?? context.strokeWidth ?? 2;
+
 		return (
 			<Svg
-				width={size}
-				height={size}
+				width={finalSize}
+				height={finalSize}
 				viewBox="0 0 24 24"
 				fill="none"
-				stroke={color}
-				strokeWidth={strokeWidth}
+				stroke={finalColor}
+				strokeWidth={finalStrokeWidth}
 				strokeLinecap="round"
 				strokeLinejoin="round"
 				{...rest}
